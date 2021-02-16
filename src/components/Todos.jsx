@@ -24,4 +24,5 @@ Todos.propTypes = {
   todos: PropTypes.arrayOf(PropTypes.shape({ text: PropTypes.string })),
   completeTodo: PropTypes.func.isRequired
 };
+
 export default Todos;
