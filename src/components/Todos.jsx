@@ -5,7 +5,7 @@ import Todo from "./Todo";
 const Todos = ({ todos, completeTodo }) => {
   return (
     <section className="todos">
-      {todos.lenght > 0 &&
+      {todos.length > 0 &&
         todos.map((todo, index) => {
           return (
             <Todo
@@ -17,7 +17,7 @@ const Todos = ({ todos, completeTodo }) => {
             />
           );
         })}
-      {todos.lenght === 0 && (
+      {todos.length === 0 && (
         <div className="todo-placeholder-text">
           Add Todo By Clicking{" "}
           <span className="add-button-placeholder-text">Add</span> Button On the
