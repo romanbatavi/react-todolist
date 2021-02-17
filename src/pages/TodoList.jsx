@@ -7,16 +7,17 @@ import Todos from "../components/Todos";
 
 const TodoList = () => {
   const [todos, setTodos] = useState([
-    { text: "Learning React!", isComplete: false },
-    { text: "Learning Hooks", isComplete: false },
-    { text: "Learning Style", isComplete: false }
+    //fixed
+    { text: "Learning React!", isCompleted: false },
+    { text: "Learning Hooks", isCompleted: false },
+    { text: "Learning Style", isCompleted: false }
   ]);
 
   const [showAdd, setShowAdd] = useState(false);
 
   const addTodo = (value) => {
     if (todos.length < 9) {
-      const addedTodo = [...todos, { text: value, isComplete: false }];
+      const addedTodo = [...todos, { text: value, isCompleted: false }];
 
       setTodos(addedTodo);
     } else {
@@ -25,7 +26,7 @@ const TodoList = () => {
   };
   const completeTodo = (index) => {
     const addedTodo = [...todos];
-    addedTodo[index].isComplete = !addedTodo[index].isComplete;
+    addedTodo[index].isCompleted = !addedTodo[index].isCompleted;
 
     setTodos(addedTodo);
   };

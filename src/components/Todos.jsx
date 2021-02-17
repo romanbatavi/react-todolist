@@ -11,6 +11,7 @@ const Todos = ({ todos, completeTodo }) => {
             <Todo
               key={index}
               text={todo.text}
+              //isComplete fix = isCompleted TodoList.jsx
               isCompleted={todo.isCompleted}
               completeTodo={completeTodo}
               index={index}
