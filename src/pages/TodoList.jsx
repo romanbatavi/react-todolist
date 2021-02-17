@@ -15,9 +15,13 @@ const TodoList = () => {
   const [showAdd, setShowAdd] = useState(false);
 
   const addTodo = (value) => {
-    const addedTodo = [...todos, { text: value, isComplete: false }];
+    if (todos.length < 9) {
+      const addedTodo = [...todos, { text: value, isComplete: false }];
 
-    setTodos(addedTodo);
+      setTodos(addedTodo);
+    } else {
+      alert("Only 9 Todos Bruh!!");
+    }
   };
   const completeTodo = (index) => {
     const addedTodo = [...todos];
