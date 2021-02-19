@@ -9,7 +9,7 @@ const Button = ({ text, onClick, color }) => {
   ].join(" ");
 
   return (
-    <button className={classNames} onClick={onclick}>
+    <button className={classNames} onClick={onClick}>
       {text}
     </button>
   );
