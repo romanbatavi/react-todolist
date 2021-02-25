@@ -8,11 +8,14 @@ const Header = ({ showAddToggle, showAdd, clearTodos }) => {
       {/* <button className="header-btn main-black-color" onClick={showAddToggle}>
         {showAdd ? "Finish" : "Add"}
       </button> */}
+      {/* refactor */}
       <Button text={showAdd ? "Finish" : "Add"} onClick={showAddToggle} />
       <h1 className="header-title">Todo Lists</h1>
-      <button className="header-btn main-red-color" onClick={clearTodos}>
+      {/* <button className="header-btn main-red-color" onClick={clearTodos}>
         Clear
-      </button>
+      </button> */}
+      {/* refactor */}
+      <Button text="Clear" onClick={clearTodos} color="red" />
     </section>
   );
 };
