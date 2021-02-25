@@ -5,17 +5,20 @@ import Button from "./Button";
 const Header = ({ showAddToggle, showAdd, clearTodos }) => {
   return (
     <section className="header">
+      {/* refactor */}
       {/* <button className="header-btn main-black-color" onClick={showAddToggle}>
         {showAdd ? "Finish" : "Add"}
       </button> */}
-      {/* refactor */}
-      <Button text={showAdd ? "Finish" : "Add"} onClick={showAddToggle} />
+      <Button
+        text={showAdd ? "Finish" : "Add"}
+        onClick={showAddToggle}
+        align="left"
+      />
       <h1 className="header-title">Todo Lists</h1>
       {/* <button className="header-btn main-red-color" onClick={clearTodos}>
         Clear
       </button> */}
-      {/* refactor */}
-      <Button text="Clear" onClick={clearTodos} color="red" />
+      <Button text="Clear" onClick={clearTodos} color="red" align="right" />
     </section>
   );
 };
