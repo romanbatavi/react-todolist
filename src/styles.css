@@ -60,7 +60,7 @@ body html {
   text-transform: lowercase;
 } */
 
-.add {
+/* .add {
   padding: 16px;
 }
 
@@ -99,7 +99,7 @@ body html {
 
 .add-btn.main-black-color:active {
   text-shadow: 1px 1px 2px var(--main-black-color);
-}
+} */
 
 .todos {
   display: flex;
