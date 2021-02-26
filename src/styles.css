@@ -108,7 +108,7 @@ body html {
   min-height: 500px;
 }
 
-.todo {
+/* .todo {
   position: relative;
 
   flex: 1 0 auto;
@@ -127,7 +127,7 @@ body html {
   left: 50%;
   transform: translate(-50%);
   width: 100%;
-}
+} */
 
 .todo-placeholder-text {
   font-family: "Homemade Apple", sans-serif;
