@@ -28,7 +28,8 @@ const Button = ({ text, onClick, color, align }) => {
 
 Button.defaultProps = {
   text: "Button",
-  color: "black"
+  color: "black",
+  align: "left"
 };
 
 Button.propTypes = {
