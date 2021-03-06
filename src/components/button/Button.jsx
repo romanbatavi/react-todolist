@@ -1,7 +1,11 @@
-import React from "react";
+/** @jsxRuntime classic */
+/** @jsx jsx */
+// import React from "react";
+import { jsx } from "@emotion/react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import styles from "./button.module.css";
+// import styles from "./button.module.css";
+import * as styles from "./button.styles";
 
 const Button = ({ text, onClick, color, align }) => {
   // sudah di import
