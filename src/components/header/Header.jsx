@@ -1,11 +1,15 @@
-import React from "react";
+/** @jsxRuntime classic */
+/** @jsx jsx */
+// import React from "react";
+import { jsx } from "@emotion/react";
 import PropTypes from "prop-types";
 import Button from "../button/Button";
-import styles from "./header.module.css";
+// import styles from "./header.module.css";
+import * as styles from "./header.styles";
 
 const Header = ({ showAddToggle, showAdd, clearTodos }) => {
   return (
-    <section className={styles.header}>
+    <section css={styles.header}>
       {/* refactor */}
       {/* <button className="header-btn main-black-color" onClick={showAddToggle}>
         {showAdd ? "Finish" : "Add"}
@@ -15,7 +19,7 @@ const Header = ({ showAddToggle, showAdd, clearTodos }) => {
         onClick={showAddToggle}
         align="left"
       />
-      <h1 className={styles.headerTitle}>Todo Lists</h1>
+      <h1 css={styles.headerTitle}>Todo Lists</h1>
       {/* <button className="header-btn main-red-color" onClick={clearTodos}>
         Clear
       </button> */}
