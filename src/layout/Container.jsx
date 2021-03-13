@@ -4,11 +4,21 @@
 import { jsx, css } from "@emotion/react";
 import PropTypes from "prop-types";
 
-const Container = ({ children, flexDirection, flexWrap }) => {
+const Container = ({
+  children,
+  flexDirection,
+  flexWrap,
+  justifyContent,
+  alignItems,
+  alignContent
+}) => {
   const containerStyles = css`
     display: flex;
     flex-direction: ${flexDirection};
     flex-wrap: ${flexWrap};
+    justify-content: ${justifyContent};
+    align-items: ${alignItems};
+    align-content: ${alignItems};
   `;
   return (
     <div className="flex-container" css={containerStyles}>
@@ -19,7 +29,10 @@ const Container = ({ children, flexDirection, flexWrap }) => {
 
 Container.defaultProps = {
   flexDirection: "row",
-  flexWrap: "nowrap"
+  flexWrap: "nowrap",
+  justifyContent: "flex-start",
+  alignItems: "stretch",
+  alignContent: "stretch"
 };
 
 Container.propTypes = {
@@ -33,7 +46,44 @@ Container.propTypes = {
     "column",
     "column-reverse"
   ]),
-  flexWrap: PropTypes.oneOf(["nowrap", "wrap", "wrap-reverse"])
+  flexWrap: PropTypes.oneOf(["nowrap", "wrap", "wrap-reverse"]),
+  justifyContent: PropTypes.oneOf([
+    "flex-start",
+    "flex-end",
+    "center",
+    "space-between",
+    "space-around",
+    "space-evenly",
+    "start",
+    "left",
+    "right"
+  ]),
+  alignItems: PropTypes.oneOf([
+    "stretch",
+    "flex-start",
+    "flex-end",
+    "center",
+    "baseline",
+    "first baseline",
+    "last baseline",
+    "start | end",
+    "self-start",
+    "self-end"
+  ]),
+  alignContent: PropTypes.oneOf([
+    "flex-start",
+    "flex-end",
+    "center",
+    "space-between",
+    "space-around",
+    "space-evenly",
+    "stretch",
+    "start",
+    "end",
+    "baseline",
+    "first baseline",
+    "last baseline"
+  ])
 };
 
 export default Container;
