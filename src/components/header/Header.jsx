@@ -16,16 +16,22 @@ const Header = ({ showAddToggle, showAdd, clearTodos }) => {
   return (
     <section className="header-component">
       <Container alignItems="flex-start">
-        <Button
-          text={showAdd ? "Finish" : "Add"}
-          onClick={showAddToggle}
-          align="left"
-        />
-        <h1 css={styles.headerTitle(theme)}>Todo Lists</h1>
+        <Item flex={1} align="left">
+          <Button
+            text={showAdd ? "Finish" : "Add"}
+            onClick={showAddToggle}
+            align="left"
+          />
+        </Item>
+        <Item flex={2}>
+          <h1 css={styles.headerTitle(theme)}>Todo Lists</h1>
+        </Item>
         {/* <button className="header-btn main-red-color" onClick={clearTodos}>
         Clear
       </button> */}
-        <Button text="Clear" onClick={clearTodos} color="red" align="right" />
+        <Item flex={1} align="right">
+          <Button text="Clear" onClick={clearTodos} color="red" align="right" />
+        </Item>
       </Container>
       {/* refactor */}
       {/* <button className="header-btn main-black-color" onClick={showAddToggle}>
