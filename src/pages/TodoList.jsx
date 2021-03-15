@@ -5,7 +5,7 @@ import Header from "../components/header/Header";
 import TodoForm from "../components/todoform/TodoForm";
 import Todos from "../components/todos/Todos";
 import Container from "../layout/Container";
-import Item from "../layout/Item";
+// import Item from "../layout/Item";
 
 const TodoList = () => {
   const [todos, setTodos] = useState([
@@ -39,7 +39,11 @@ const TodoList = () => {
 
   return (
     <Paper>
-      <Container flexDirection="column" justifyContent="space-between">
+      <Container
+        flexDirection="column"
+        justifyContent="space-between"
+        height="100%"
+      >
         <Header
           showAddToggle={showAddToggle}
           showAdd={showAdd}
