@@ -24,7 +24,7 @@ export const button = ({ color, align, theme }) => {
     text-align: ${align};
 
     /* width: 24%; */
-    padding: 16px;
+    padding: 0 16px;
     cursor: pointer;
     background: unset;
     border: unset;
